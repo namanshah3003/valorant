@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,900&display=swap");
+
+@font-face {
+  font-family: "barlow-medium";
+  src: url(../resources/fonts/barlow/Barlow-Medium.ttf);
+}
+
+@font-face {
+  font-family: "tungsten-bold";
+  src: url(../resources/fonts/Tungsten-Bold.otf);
+}
+
+:root {
+  --color-red: #ff4655;
+  --color-greyish: #ece8e1;
+  --color-greyishLight: rgba(255, 255, 255, 0.5);
+  --color-black: #0f1923;
+  --color-blackLight: rgba(0, 0, 0, 0.2);
+  --color-grey: #383e3a;
+  --font-tungsten: "tungsten-bold", Arial, sans-serif;
+  --font-barlowBold: "Barlow", sans-serif;
+  --font-barlowMedium: "barlow-medium", sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: var(--font-barlowBold);
+}
+
+/* ========= HERO ========= */
+
+.hero {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.hero_video {
+  width: 100%;
+}
+
+.hero_text {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--color-greyishLight);
+  border-right: 1px solid var(--color-greyishLight);
+}
+
+.hero_line {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  border-left: 1px solid var(--color-greyishLight);
+}
+
+.hero_poly1 {
+  width: 23px;
+  height: 23px;
+  clip-path: polygon(0 18%, 60% 18%, 100% 53%, 60% 88%, 0 87%);
+  background-color: var(--color-red);
+  left: 0px;
+  position: absolute;
+  top: 150px;
+}
+
+.hero_title {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero_subtitle {
+  color: var(--color-greyish);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.hero_valorant {
+  width: 80%;
+  padding: 50px 0;
+}
+
+.button {
+  width: 255px;
+  height: 65px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.button_bordertop {
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  border-top: 1px solid #ece8e184;
+  border-left: 1px solid #ece8e184;
+  border-right: 1px solid #ece8e184;
+  align-self: flex-start;
+}
+
+.button_borderBottom {
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  border-bottom: 1px solid #ece8e184;
+  border-left: 1px solid #ece8e184;
+  border-right: 1px solid #ece8e184;
+  align-self: flex-end;
+}
+
+.real_button {
+  border: none;
+  width: 240px;
+  height: 50px;
+  background-color: var(--color-red);
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.real_button::before {
+  content: "";
+  width: 115%;
+  height: 104%;
+  background-color: var(--color-black);
+  position: absolute;
+  top: -1px;
+  left: -115%;
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  transition: left 0.25s linear;
+}
+
+.button:hover {
+  .real_button::before {
+    left: 0;
+  }
+}
+
+.real_button::after {
+  content: "PLAY FREE";
+  font-family: var(--font-barlowMedium);
+  width: 100%;
+  height: 100%;
+  color: var(--color-greyish);
+  font-weight: 700;
+  font-size: 0.9rem;
+  position: absolute;
+  padding: 15px 0px;
+  top: 0;
+  left: 0;
+}
+
+.button_square
+{
+  background-color: var(--color-black);
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  bottom: 0;
+  right: 0;
+  transition: background-color 0.25s;
+}
+
+.real_button:hover{
+  .button_square
+  {
+    background-color: var(--color-greyish);
+  }
+}
+
+.hero_poly2 {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-greyish);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
