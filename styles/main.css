@@ -196,3 +196,78 @@ main {
   bottom: 0;
   left: 0;
 }
+
+/* =========== ACT SECTION ============ */
+
+.act {
+  background-image: url(..\\resources\\Ep8a1_Defiance_Playval.com_Act_Overview_banner_3440x1020_Darkbg.jpg);
+  width: 100vw;
+  background-position: center top;
+}
+
+.act_container {
+  height: 850px;
+  width: 80%;
+  max-width: 1300px;
+  border-left: 1px solid var(--color-greyishLight);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 30px;
+}
+
+.act_paragraph {
+  color: var(--color-greyish);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.6rem;
+  font-family: 'FF Mark 2';
+}
+
+.act_titleBox {
+  width: fit-content;
+  height: fit-content;
+  margin: 40px 0 60px;
+  overflow-y: hidden;
+}
+
+.act_title {
+  color: var(--color-greyish);
+  font-size: 8rem;
+  margin-bottom: -25px;
+  font-family: var(--font-tungsten);
+}
+
+.act_btn::after {
+  content: "WATCH NOW";
+}
+
+.act_squares {
+  height: 40px;
+  width: 100%;
+  margin-left: -30px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.act_square1 {
+  height: 10px;
+  width: 10px;
+  background-color: var(--color-red);
+}
+
+.act_line {
+  height: 4px;
+  width: 100px;
+  background-color: var(--color-red);
+  transform: translateX(150%);
+}
+
+.act_square2 {
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-red);
+  align-self: flex-end;
+}
