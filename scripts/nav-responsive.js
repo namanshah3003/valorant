@@ -12,4 +12,12 @@ for (let i = 0; i < searchToggle.length; i++) {
   });
 }
 
+const backImg=document.querySelector('.agents_models')
 
+document.addEventListener('scroll',function(){
+    let value = window.scrollY
+    console.log(value)
+    if(value>2286 & value<3103){
+        backImg.style.marginTop="-"+(value-2400)/3+'px'
+    }
+})
